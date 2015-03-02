@@ -1,10 +1,7 @@
-" File: .vimrc
-" Author: Jake Zimmerman <jake@zimmerman.io>
-"
-" How I configure Vim :P
-"
 
-" Gotta be first
+"
+" Vim Configuraition- aungthurhahein@gmail.com
+"
 set nocompatible
 
 filetype off
@@ -28,6 +25,14 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
+
+"-----Python Plugin----------------------------------------------------
+Plugin 'klen/python-mode'
+Plugin 'fs111/pydoc.vim'
+Plugin 'cburroughs/pep8.py'
+"------Markdown Plugin-------------------------------------------------
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -85,7 +90,7 @@ set mouse=a
 set background=dark
 
 " Uncomment the next line if your terminal is not configured for solarized
-"let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
 
 " Set the colorscheme
 colorscheme solarized
