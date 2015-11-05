@@ -25,11 +25,15 @@ Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/a.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 "-----Python Plugin----------------------------------------------------
 Plugin 'klen/python-mode'
 Plugin 'fs111/pydoc.vim'
 Plugin 'cburroughs/pep8.py'
+Plugin 'valloric/YouCompleteMe'
+
 "------Markdown Plugin-------------------------------------------------
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
@@ -40,11 +44,12 @@ Plugin 'tpope/vim-fugitive'
 
 " ----- Other text editing features -----------------------------------
 Plugin 'Raimondi/delimitMate'
+Plugin 'easymotion/vim-easymotion'
 
 " ----- man pages, tmux -----------------------------------------------
 Plugin 'jez/vim-superman'
 Plugin 'christoomey/vim-tmux-navigator'
-
+Plugin 'mileszs/ack.vim'
 " ----- Syntax plugins ------------------------------------------------
 Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
