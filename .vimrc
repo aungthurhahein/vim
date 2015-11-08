@@ -1,4 +1,3 @@
-
 "
 " Vim Configuraition- aungthurhahein@gmail.com
 "
@@ -88,6 +87,14 @@ syntax on
 
 set mouse=a
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+"
+" " Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
 " ----- Plugin-Specific Settings --------------------------------------
 
 " ----- altercation/vim-colors-solarized settings -----
@@ -95,7 +102,7 @@ set mouse=a
 set background=dark
 
 " Uncomment the next line if your terminal is not configured for solarized
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 
 " Set the colorscheme
 colorscheme solarized
@@ -169,4 +176,27 @@ augroup mydelimitMate
   au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
 augroup END
 
+" YouCompleteMe:for C family support, this config path need to point out 
+let g:ycm_global_ycm_extra_conf = '~atrx/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
+" default auto indentation
+set ts=4 sts=4 sw=4 noexpandtab
+
+" Only do this part when compiled with support for autocommands
+if has("autocmd")
+  " Enable file type detection
+  filetype on
+
+  " Syntax of these languages is fussy over tabs Vs spaces
+  autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+  " Customisations based on house-style (arbitrary)
+  autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+  autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
+  autocmd FileType python setlocal ts=4 sts=4 sw=4 noexpandtab
+
+  " Treat .rss files as XML
+  autocmd BufNewFile,BufRead *.rss setfiletype xml
+endif
